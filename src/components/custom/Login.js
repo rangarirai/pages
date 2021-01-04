@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -17,6 +17,7 @@ import {
 // import FacebookIcon from 'src/icons/Facebook';
 import GoogleIcon from 'src/icons/Google';
 import Page from 'src/components/Page';
+import LoginHelper from 'src/components/custom/LoginHelper';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,6 +34,7 @@ const useStyles = makeStyles(theme => ({
 const LoginView = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  let [loginState, setLoginState] = useState('initial');
 
   return (
     <Page className={classes.root} title="Login">
@@ -90,7 +92,7 @@ const LoginView = () => {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    textAlign:"center"
+                    textAlign: 'center'
                   }}
                 >
                   <div className={classes.divide}>
@@ -110,7 +112,7 @@ const LoginView = () => {
                     <Divider />
                   </div>
                 </div>
-
+                {/* <LoginHelper /> */}
                 <Typography color="textSecondary" gutterBottom variant="body2">
                   Login / Sign Up with your Email
                 </Typography>

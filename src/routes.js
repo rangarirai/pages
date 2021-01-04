@@ -11,6 +11,7 @@ import ProductListView from 'src/views/product/ProductListView';
 import RegisterView from 'src/views/auth/RegisterView';
 import SettingsView from 'src/views/settings/SettingsView';
 import Login from 'src/components/custom/Login';
+import EInvoicing from 'src/components/custom/E-Invoicing/Index';
 
 const routes = [
   {
@@ -29,8 +30,9 @@ const routes = [
     path: '/',
     element: <MainLayout />,
     children: [
-      { path: 'login', element: <LoginView /> },
       { path: 'demologin', element: <Login /> },
+      { path: 'einvoicing', element: <EInvoicing /> },
+      { path: 'login', element: <LoginView /> },
       { path: 'register', element: <RegisterView /> },
       { path: '404', element: <NotFoundView /> },
       { path: '/', element: <Navigate to="/app/dashboard" /> },
