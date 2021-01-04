@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
+
 import {
   Box,
   Button,
@@ -58,7 +58,7 @@ const Index = props => {
        {info.map(d => (
         <Item data={d} />
       ))}</div>
-     
+     <NavTab/>
     </div>
   );
 };

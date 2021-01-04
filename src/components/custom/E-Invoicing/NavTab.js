@@ -7,7 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import ItemLower from 'src/components/custom/E-Invoicing/ItemLower';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -51,6 +51,27 @@ const useStyles = makeStyles(theme => ({
 export default function SimpleTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  let info = [
+    {
+      title: 'Branchwise E-Invoices Summary',
+      summary: '',
+      color: '#f5df4d',
+      icon: 'ReceiptIcon'
+    },
+
+    {
+      title: 'Operational DashBoard',
+      summary: '',
+      color: '#90EE90',
+      icon: 'DashboardIcon'
+    },
+    {
+      title: 'Comparison Reports',
+      summary: '',
+      color: '#3f97cc',
+      icon: 'AssessmentIcon'
+    }
+  ];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -58,25 +79,25 @@ export default function SimpleTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="white">
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Reports" {...a11yProps(0)} />
+          <Tab label="Manage EWB" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        Item One
+        <div style={{ display: 'flex',}}>
+          {info.map(d => (
+            <ItemLower data={d} />
+          ))}
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
+        Manage EWB
       </TabPanel>
     </div>
   );

@@ -8,15 +8,15 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
-import VisibilityIcon from '@material-ui/icons/Visibility';
-import HistoryIcon from '@material-ui/icons/History';
-import ShopIcon from '@material-ui/icons/Shop';
+import AssessmentIcon from '@material-ui/icons/Assessment';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: '24%',
-    textAlign: 'center'
+    maxWidth: '18%',
+    textAlign: 'center',
+    marginRight: '15px'
   },
   media: {
     height: 140
@@ -29,18 +29,16 @@ export default function MediaCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        {props.data.icon === 'AddCircleRoundedIcon' ? (
-          <AddCircleRoundedIcon
+        {props.data.icon === 'AssessmentIcon' ? (
+          <AssessmentIcon
             style={{ fontSize: '100px', color: props.data.color }}
           />
-        ) : props.data.icon === 'VisibilityIcon' ? (
-          <VisibilityIcon
+        ) : props.data.icon === 'DashboardIcon' ? (
+          <DashboardIcon
             style={{ fontSize: '100px', color: props.data.color }}
           />
-        ) : props.data.icon === 'HistoryIcon' ? (
-          <HistoryIcon style={{ fontSize: '100px', color: props.data.color }} />
-        ) : props.data.icon === 'ShopIcon' ? (
-          <ShopIcon style={{ fontSize: '100px', color: props.data.color }} />
+        ) : props.data.icon === 'ReceiptIcon' ? (
+          <ReceiptIcon style={{ fontSize: '100px', color: props.data.color }} />
         ) : (
           ''
         )}
