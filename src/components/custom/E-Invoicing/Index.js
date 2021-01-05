@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
   gap: {
     marginTop: theme.spacing(2)
   },
+  gapSmall: {
+    marginTop: theme.spacing(1)
+  },
   space: {
     marginRight: theme.spacing(1)
   }
@@ -69,9 +72,13 @@ const Index = props => {
 
         <div
           style={{ display: 'flex', alignItems: 'center', color: '#3f97cc' }}
+          className={classes.gapSmall}
         >
           {' '}
-          <FolderIcon className={classes.space} style={{ color: '#3f97cc' , cursor:"pointer"}} />{' '}
+          <FolderIcon
+            className={classes.space}
+            style={{ color: '#3f97cc', cursor: 'pointer' }}
+          />{' '}
           <Typography variant="body1">Add Business/GSTIN</Typography>
         </div>
         <div className={classes.gap}>
