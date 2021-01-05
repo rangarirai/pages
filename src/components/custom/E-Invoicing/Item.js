@@ -31,16 +31,16 @@ export default function MediaCard(props) {
       <CardActionArea>
         {props.data.icon === 'AddCircleRoundedIcon' ? (
           <AddCircleRoundedIcon
-            style={{ fontSize: '100px', color: props.data.color }}
+            style={{ fontSize: '90px', color: props.data.color }}
           />
         ) : props.data.icon === 'VisibilityIcon' ? (
           <VisibilityIcon
-            style={{ fontSize: '100px', color: props.data.color }}
+            style={{ fontSize: '90px', color: props.data.color }}
           />
         ) : props.data.icon === 'HistoryIcon' ? (
-          <HistoryIcon style={{ fontSize: '100px', color: props.data.color }} />
+          <HistoryIcon style={{ fontSize: '90px', color: props.data.color }} />
         ) : props.data.icon === 'ShopIcon' ? (
-          <ShopIcon style={{ fontSize: '100px', color: props.data.color }} />
+          <ShopIcon style={{ fontSize: '90px', color: props.data.color }} />
         ) : (
           ''
         )}

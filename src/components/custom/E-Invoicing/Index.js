@@ -14,10 +14,19 @@ import {
 
 import Item from 'src/components/custom/E-Invoicing/Item';
 import NavTab from 'src/components/custom/E-Invoicing/NavTab';
+import Nav from 'src/components/custom/Nav';
+import IconButton from '@material-ui/core/IconButton';
+import FolderIcon from '@material-ui/icons/Folder';
 
 const useStyles = makeStyles(theme => ({
   root: {
     // backgroundColor: 'grey'
+  },
+  gap: {
+    marginTop: theme.spacing(2)
+  },
+  space: {
+    marginRight: theme.spacing(1)
   }
 }));
 
@@ -30,19 +39,20 @@ const Index = props => {
       color: '#90EE90',
       icon: 'AddCircleRoundedIcon'
     },
-      {
+    {
       title: 'View all E-Invoices',
       summary: 'View all Uploaded documents and take action on them',
       color: '#f6a46d',
       icon: 'VisibilityIcon'
     },
-      {
+    {
       title: 'Data Import History',
-      summary: 'View all your previously imported sales document and review to fix errors',
+      summary:
+        'View all your previously imported sales document and review to fix errors',
       color: '#3f97cc',
       icon: 'HistoryIcon'
     },
-      {
+    {
       title: 'Purchase Invoices',
       summary: 'View E-Invoices generated against you by vendors',
       color: '#f56674',
@@ -50,16 +60,36 @@ const Index = props => {
     }
   ];
   return (
-    <div className={classes.root}>
-      <div>Welcome To Our E-Invoicing!</div>
-      <div>Add Business/GSTIN</div>
-      <div>Recommendations</div>
-      <div style={{display:"flex", justifyContent:"space-between"}}>
-       {info.map(d => (
-        <Item data={d} />
-      ))}</div>
-     <NavTab/>
-    </div>
+    <Container>
+      <div className={classes.root}>
+        <Nav />
+        <div>
+          <Typography variant="h3">Welcome To Our E-Invoicing!</Typography>{' '}
+        </div>
+
+        <div
+          style={{ display: 'flex', alignItems: 'center', color: '#3f97cc' }}
+        >
+          {' '}
+          <FolderIcon className={classes.space} style={{ color: '#3f97cc' , cursor:"pointer"}} />{' '}
+          <Typography variant="body1">Add Business/GSTIN</Typography>
+        </div>
+        <div className={classes.gap}>
+          <Typography variant="body1">Recommendations</Typography>
+        </div>
+        <div
+          className={classes.gap}
+          style={{ display: 'flex', justifyContent: 'space-between' }}
+        >
+          {info.map(d => (
+            <Item data={d} />
+          ))}
+        </div>
+        <div className={classes.gap}>
+          <NavTab />
+        </div>
+      </div>
+    </Container>
   );
 };
 

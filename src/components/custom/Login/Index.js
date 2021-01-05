@@ -17,7 +17,7 @@ import {
 // import FacebookIcon from 'src/icons/Facebook';
 import GoogleIcon from 'src/icons/Google';
 import Page from 'src/components/Page';
-import LoginHelper from 'src/components/custom/LoginHelper';
+import LoginHelper from 'src/components/custom/Login/LoginHelper';
 
 const useStyles = makeStyles(theme => ({
   root: {

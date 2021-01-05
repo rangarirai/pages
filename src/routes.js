@@ -10,7 +10,7 @@ import NotFoundView from 'src/views/errors/NotFoundView';
 import ProductListView from 'src/views/product/ProductListView';
 import RegisterView from 'src/views/auth/RegisterView';
 import SettingsView from 'src/views/settings/SettingsView';
-import Login from 'src/components/custom/Login';
+import Login from 'src/components/custom/Login/Index';
 import EInvoicing from 'src/components/custom/E-Invoicing/Index';
 
 const routes = [

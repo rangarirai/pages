@@ -31,14 +31,14 @@ export default function MediaCard(props) {
       <CardActionArea>
         {props.data.icon === 'AssessmentIcon' ? (
           <AssessmentIcon
-            style={{ fontSize: '100px', color: props.data.color }}
+            style={{ fontSize: '80px', color: props.data.color }}
           />
         ) : props.data.icon === 'DashboardIcon' ? (
           <DashboardIcon
-            style={{ fontSize: '100px', color: props.data.color }}
+            style={{ fontSize: '80px', color: props.data.color }}
           />
         ) : props.data.icon === 'ReceiptIcon' ? (
-          <ReceiptIcon style={{ fontSize: '100px', color: props.data.color }} />
+          <ReceiptIcon style={{ fontSize: '80px', color: props.data.color }} />
         ) : (
           ''
         )}
