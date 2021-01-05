@@ -12,6 +12,7 @@ import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import HistoryIcon from '@material-ui/icons/History';
 import ShopIcon from '@material-ui/icons/Shop';
+import SimpleModal from 'src/components/custom/Modal';
 
 const useStyles = makeStyles({
   root: {
@@ -25,9 +26,14 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles();
-
   return (
-    <Card className={classes.root}>
+    <>
+    <Card
+      className={classes.root}
+      onClick={function() {
+        props.data.handleOpen();
+      }}
+    >
       <CardActionArea>
         {props.data.icon === 'AddCircleRoundedIcon' ? (
           <AddCircleRoundedIcon
@@ -53,6 +59,9 @@ export default function MediaCard(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
+      {}
     </Card>
+     <SimpleModal data={props.data}/>
+     </>
   );
 }
