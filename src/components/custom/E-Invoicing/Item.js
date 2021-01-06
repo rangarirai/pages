@@ -8,11 +8,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import HistoryIcon from '@material-ui/icons/History';
 import ShopIcon from '@material-ui/icons/Shop';
-import SimpleModal from 'src/components/custom/Modal';
+import Generate from 'src/components/custom/E-Invoicing/Generate';
 
 const useStyles = makeStyles({
   root: {
@@ -30,15 +29,10 @@ export default function MediaCard(props) {
     <>
     <Card
       className={classes.root}
-      onClick={function() {
-        props.data.handleOpen();
-      }}
     >
       <CardActionArea>
         {props.data.icon === 'AddCircleRoundedIcon' ? (
-          <AddCircleRoundedIcon
-            style={{ fontSize: '90px', color: props.data.color }}
-          />
+        <Generate data={props.data}/>
         ) : props.data.icon === 'VisibilityIcon' ? (
           <VisibilityIcon
             style={{ fontSize: '90px', color: props.data.color }}
@@ -61,7 +55,6 @@ export default function MediaCard(props) {
       </CardActionArea>
       {}
     </Card>
-     <SimpleModal data={props.data}/>
      </>
   );
 }

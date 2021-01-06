@@ -17,7 +17,6 @@ import NavTab from 'src/components/custom/E-Invoicing/NavTab';
 import Nav from 'src/components/custom/Nav';
 import IconButton from '@material-ui/core/IconButton';
 import FolderIcon from '@material-ui/icons/Folder';
-import Generate from 'src/components/custom/E-Invoicing/Generate';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,12 +43,7 @@ const Index = props => {
       title: 'Generate E-Invoices',
       summary: 'Upload your sales documents to genreate IRN and QR code',
       color: '#90EE90',
-      icon: 'AddCircleRoundedIcon',
-      body: Generate(),
-      open: false,
-      handleOpen: function() {
-        this.open = !this.open;
-      }
+      icon: 'AddCircleRoundedIcon'
    },
     // {
     //   title: 'View all E-Invoices',
