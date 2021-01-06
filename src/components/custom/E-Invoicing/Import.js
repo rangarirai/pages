@@ -22,6 +22,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import CloseIcon from '@material-ui/icons/Close';
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     color: 'green'
@@ -53,25 +54,25 @@ const Import = (props) => {
       title: 'Government Excel',
       summary: 'Import data prepared and saved on government excel format',
       color: '#90EE90',
-      icon: 'HistoryIcon'
+      icon: 'ImportContactsIcon'
     },
     {
       title: 'Custom Excel Template',
       summary: 'Import data prepared on your own Excel template',
       color: '#f6a46d',
-      icon: 'VisibilityIcon'
+      icon: 'ImportContactsIcon'
     },
     {
       title: 'Tally',
       summary: 'Import your data prepared and saved in Tally on your system',
       color: '#3f97cc',
-      icon: 'HistoryIcon'
+      icon: 'ImportContactsIcon'
     },
     {
       title: 'Cleartax Template',
       summary: 'Import data prepared and saved on a Cleartax template',
       color: '#f56674',
-      icon: 'ShopIcon'
+      icon: 'ImportContactsIcon'
     }
   ];
   return (
