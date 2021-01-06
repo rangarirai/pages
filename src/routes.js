@@ -5,13 +5,14 @@ import MainLayout from 'src/layouts/MainLayout';
 import AccountView from 'src/views/account/AccountView';
 import CustomerListView from 'src/views/customer/CustomerListView';
 import DashboardView from 'src/views/reports/DashboardView';
-import LoginView from 'src/views/auth/LoginView';
+// import LoginView from 'src/views/auth/LoginView';
 import NotFoundView from 'src/views/errors/NotFoundView';
 import ProductListView from 'src/views/product/ProductListView';
 import RegisterView from 'src/views/auth/RegisterView';
 import SettingsView from 'src/views/settings/SettingsView';
 import Login from 'src/components/custom/Login/Index';
 import EInvoicing from 'src/components/custom/E-Invoicing/Index';
+import Import from 'src/components/custom/E-Invoicing/Import';
 
 const routes = [
   {
@@ -30,9 +31,10 @@ const routes = [
     path: '/',
     element: <MainLayout />,
     children: [
-      { path: 'demologin', element: <Login /> },
+      { path: 'login', element: <Login /> },
       { path: 'einvoicing', element: <EInvoicing /> },
-      { path: 'login', element: <LoginView /> },
+      { path: 'import', element: <Import /> },
+      // { path: 'login', element: <LoginView /> },
       { path: 'register', element: <RegisterView /> },
       { path: '404', element: <NotFoundView /> },
       { path: '/', element: <Navigate to="/app/dashboard" /> },

@@ -45,40 +45,25 @@ const Index = props => {
       color: '#90EE90',
       icon: 'AddCircleRoundedIcon'
    },
-    // {
-    //   title: 'View all E-Invoices',
-    //   summary: 'View all Uploaded documents and take action on them',
-    //   color: '#f6a46d',
-    //   icon: 'VisibilityIcon',
-    //   body: '',
-    //   open: false,
-    //   handleOpen: function() {
-    //     this.open = !this.open;
-    //   }
-    // },
-    // {
-    //   title: 'Data Import History',
-    //   summary:
-    //     'View all your previously imported sales document and review to fix errors',
-    //   color: '#3f97cc',
-    //   icon: 'HistoryIcon',
-    //   body: '',
-    //   open: false,
-    //   handleOpen: function() {
-    //     this.open = !this.open;
-    //   }
-    // },
-    // {
-    //   title: 'Purchase Invoices',
-    //   summary: 'View E-Invoices generated against you by vendors',
-    //   color: '#f56674',
-    //   icon: 'ShopIcon',
-    //   body: '',
-    //   open: false,
-    //   handleOpen: function() {
-    //     this.open = !this.open;
-    //   }
-    // }
+    {
+      title: 'View all E-Invoices',
+      summary: 'View all Uploaded documents and take action on them',
+      color: '#f6a46d',
+      icon: 'VisibilityIcon',
+    },
+    {
+      title: 'Data Import History',
+      summary:
+        'View all your previously imported sales document and review to fix errors',
+      color: '#3f97cc',
+      icon: 'HistoryIcon',
+    },
+    {
+      title: 'Purchase Invoices',
+      summary: 'View E-Invoices generated against you by vendors',
+      color: '#f56674',
+      icon: 'ShopIcon',
+    }
   ];
   return (
     <Container>
