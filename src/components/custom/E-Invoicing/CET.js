@@ -16,6 +16,7 @@ import Slide from '@material-ui/core/Slide';
 import ImportContactsIcon from '@material-ui/icons/ImportContacts';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import { Box, Container, Grid, Link, TextField } from '@material-ui/core';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -111,6 +112,33 @@ export default function FullScreenDialog(props) {
               Import data using custom excel template
             </Typography>
           </div>
+          <div className={classes.gap} >
+            <Typography>
+              If you have prepared your data on your previously added template,
+              please click below to add the file
+            </Typography>
+            <Typography className={classes.gap} variant="h5">Select custom template</Typography>
+          </div>
+          <Button 
+          className={classes.gap} 
+            style={{
+              backgroundColor: '#4d63d0',
+              color: 'white',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between'
+            }}
+          >
+            <CloudUploadIcon className={classes.space} />{' '}
+            <span>Select file from your computer</span>
+          </Button>
+          <Divider className={classes.gap} />
+          <Typography className={classes.gap}>
+            <span >
+              Did not find your template in the list above. <span style={{color:"#4d63d0", cursor:"pointer"}}>Click here to add
+              your own custom link</span> 
+            </span>
+          </Typography>
         </Container>
       </Dialog>
     </div>
