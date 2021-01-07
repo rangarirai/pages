@@ -73,7 +73,7 @@ export default function FullScreenDialog(props) {
             <Toolbar>
               <IconButton>
                 {' '}
-                <AccountBoxIcon />
+                <AccountBoxIcon style={{color:"#4d63d0"}}/>
               </IconButton>
 
               <Typography variant="h5" className={classes.spaceLarge}>

@@ -13,6 +13,7 @@ import SettingsView from 'src/views/settings/SettingsView';
 import Login from 'src/components/custom/Login/Index';
 import EInvoicing from 'src/components/custom/E-Invoicing/Index';
 import Import from 'src/components/custom/E-Invoicing/Import';
+import Mapping from 'src/components/custom/E-Invoicing/Mapping';
 
 const routes = [
   {
@@ -34,6 +35,7 @@ const routes = [
       { path: 'login', element: <Login /> },
       { path: 'einvoicing', element: <EInvoicing /> },
       { path: 'import', element: <Import /> },
+      { path: 'Mapping', element: <Mapping /> },
       // { path: 'login', element: <LoginView /> },
       { path: 'register', element: <RegisterView /> },
       { path: '404', element: <NotFoundView /> },
