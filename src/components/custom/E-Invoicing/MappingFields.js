@@ -20,9 +20,16 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import PublishIcon from '@material-ui/icons/Publish';
 import MapIcon from '@material-ui/icons/Map';
 import SaveAltIcon from '@material-ui/icons/SaveAlt';
+import ETable from 'src/components/custom/E-Invoicing/ETable';
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: 'relative'
+  },
+  rad: {
+    borderStartEndRadius: '14px',
+    borderEndStartRadius: '14px',
+    borderEndEndRadius: '14px',
+    borderStartStartRadius: '14px'
   },
   title: {
     marginLeft: theme.spacing(2),
@@ -87,73 +94,70 @@ export default function FullScreenDialog(props) {
               </IconButton>
             </Toolbar>
           </AppBar>
-          <div
-            id="innerContainer"
-            style={{ display: 'flex', justifyContent: 'space-between' }}
-          >
-            <div id="left" className={`${classes.space} ${classes.gap}`}>
-              <div>
-                <Typography variant="h4">
-                  Upload a file from your computer
-                </Typography>
-                <Typography>to start mapping</Typography>
-              </div>
+          <div className={classes.gap}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant="h4">Map the fields</Typography>
               <Button
-                className={classes.gap}
                 style={{
+                  marginLeft: 'auto',
                   backgroundColor: '#4d63d0',
-                  color: 'white',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
+                  color: 'white'
                 }}
               >
-                <CloudUploadIcon className={classes.space} />{' '}
-                <span>Select file from your computer</span>
+                {' '}
+                Save template
               </Button>
-              <Divider className={classes.gap} />
-              <div className={classes.gap}>
-                <Typography variant="h4">
-                  Select a file containing the invoice details xlsx/csv/xls/xlsm
-                  files supported
-                </Typography>
-                <Typography className={classes.gap}>
-                  <ul>
-                    <li>
-                      Make sure the sheet you want to map is the first sheet in
-                      the Excel file
-                    </li>
-                    <li>
-                      Ensure the headers are present in the first row of the
-                      sheet
-                    </li>
-                    <li>
-                      Please ensure merged cellls are not present in the Excel
-                      file
-                    </li>
-                  </ul>
-                </Typography>
-              </div>
             </div>
-            <div id="right" className={classes.gap}>
-              <div className={classes.rightDesign}>
-                <PublishIcon style={{ fontSize: '100px' , color:"#f2d43d"}} />{' '}
-                <span>Upload a file containing invoice details</span>
-              </div>
-              <div className={classes.rightDesign}>
-                <MapIcon style={{ fontSize: '100px', color:"#5aa57d" }} />
-                <span>
-                  Match the colums in ClearTax templates to corresponding
-                  columns in your file
-                </span>
-              </div>
-              <div className={classes.rightDesign}>
-                <SaveAltIcon style={{ fontSize: '100px', color:"#3a5fcd" }} />
-                <span>
-                  Save your matched fields as a template and use them to repeat
-                  invoice imports to a GSTIN
-                </span>
-              </div>
+            <div
+              className={classes.gap}
+              style={{ display: 'flex', alignItems: 'center' }}
+            >
+              <Typography className={classes.space}>
+                Total columns mapped: 5/132
+              </Typography>
+              <Typography
+                className={classes.space}
+                style={{ fontSize: '30px' }}
+              >
+                |
+              </Typography>
+              <Typography className={classes.space}>Show</Typography>
+              <Button
+                style={{
+                  color: 'white',
+                  backgroundColor: '#7d2ae8'
+                }}
+                className={`${classes.rad} ${classes.space}`}
+              >
+                ALL
+              </Button>
+              <Button
+                style={{
+                  border: 'grey solid 0.5px'
+                }}
+                className={`${classes.rad} ${classes.space}`}
+              >
+                Mapped Fields
+              </Button>
+              <Button
+                style={{
+                  border: 'grey solid 0.5px'
+                }}
+                className={`${classes.rad} ${classes.space}`}
+              >
+                UnMapped Fields
+              </Button>
+              <Button
+                style={{
+                  border: 'grey solid 0.5px',
+                  marginLeft: 'auto'
+                }}
+              >
+                Clear all mapping
+              </Button>
+            </div>
+            <div className={classes.gap}>
+              <ETable />
             </div>
           </div>
         </Container>
